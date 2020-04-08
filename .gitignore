@@ -87,8 +87,8 @@ celerybeat-schedule
 
 # SageMath parsed files
 *.sage.py
-*.env
-*.test.txt
+
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -170,4 +170,5 @@ dmypy.json
 # Ignore all local history of files
 .history
 
+.env
 # End of https://www.gitignore.io/api/flask,python,visualstudiocode
