@@ -41,8 +41,11 @@ def new_element():
 
 @app.route('/next')
 def next_element():
-    line = _line.dequeue()
-    return jsonify({"msg":"You are next"}),200
+    if len(_line._queue)>0:
+        line = _line.dequeue()
+        return jsonify({"msg":"You are next"}),200
+    else:
+        return jsonify({"msg":"no more people in the list"}),404
 
 @app.route('/all')
 def all_elements():
