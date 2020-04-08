@@ -1,0 +1,6 @@
+flask
+flask-script
+flask-cors
+flask-migrate
+flask-sqlalchemy
+twilio

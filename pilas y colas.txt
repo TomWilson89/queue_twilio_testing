@@ -1,0 +1,14 @@
+Search fifo and lifo
+
+In python we use this process as lists:
+
+q = [1,2,3,4,5]
+
+FIFO = First In First Out--> delete the first one of the list
+If we were using fifo method, we would have to look for the first value to be input and also the first to go out or be processed.
+
+If using lifo method we would have to look for the last one of the input and be the first one to be processed.
+LIFO = Last in Last Out --> delete the last one of the list
+
+To do this, we would be working 
+
