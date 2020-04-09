@@ -10,11 +10,11 @@ class Line:
         self.phone =0
         self._queue = [{
             'name': 'Tom Wilson',
-            'phone': '+56997730170'
+            'phone': ''
         },
         {
             'name': 'Nelson Mandela',
-            'phone': '+56997730170'
+            'phone': ''
 
         }]
         self._mode = 'FIFO'
@@ -22,7 +22,7 @@ class Line:
         message_add = self.client.messages.create(
             body="Welcome"+ item["name"] + "you have been added to the queue, you have: "+ str(self.size()) +" person(s) before you turn, we will inform you when it's your turn, thank you for choosing us",
             to = item["phone"],
-            from_ = "+19715992774"
+            from_ = ""
             )
 
         self._queue.append(item)
@@ -32,13 +32,13 @@ class Line:
             message_now = self.client.messages.create(
                 body="Mr/Mrs."+self._queue[0]['name']+", you are next, please approach to the counter",
                 to = self._queue[0]['phone'],
-                from_ = "+19715992774"
+                from_ = ""
                 )
             if len(self._queue)>1:
                 message_next = self.client.messages.create(
                     body="Mr/Mrs."+self._queue[1]['name']+", there is only one turn before yours, please approach to the counter",
                     to = self._queue[1]['phone'],
-                    from_ = "+19715992774"
+                    from_ = ""
                     )
             self._queue.pop(0)
        
